@@ -11,7 +11,7 @@ Documentation: https://lloyddaviddesigns.co.uk/relier-theme-documentation
 
 Copyright © 2018-2019 Lloyd David Designs
 
-===== ----->    
+===== ----->
 
 <!-- === Meta Tags === -->
 <meta charset="utf-8">
@@ -27,6 +27,22 @@ Copyright © 2018-2019 Lloyd David Designs
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
 {/block:Description}
+<!-- THEME OPTIONS -->
+<!-- Link/Accent Colour -->
+<meta name="color:Accent Color" content="#ffd293"/>
+<!-- Social Media Icons -->
+<meta name="text:Icon 1" content=""/>
+<meta name="text:Icon Link 1" content=""/>
+<meta name="text:Icon 2" content=""/>
+<meta name="text:Icon Link 2" content=""/>
+<meta name="text:Icon 3" content=""/>
+<meta name="text:Icon Link 3" content=""/>
+<meta name="text:Icon 4" content=""/>
+<meta name="text:Icon Link 4" content=""/>
+<!-- Header Background Image -->
+<meta name="image:Header Image" content=""/>
+<!-- Animated Heading -->
+<meta name="if:Show Animated Heading" content="1"/>
 <!-- Uploaded File References -->
 <link rel="stylesheet" href="https://static.tumblr.com/pekmf57/NwXpko7hm/bootstrap.css">
 <!-- Google Fonts - https://developers.google.com/fonts/ -->
@@ -68,7 +84,7 @@ i {
 color : #000;
 }
 a {
-color : #ffd79d;
+color : {color:Accent Color};
 }
 a:hover {
 color : #000;
@@ -179,13 +195,13 @@ margin-bottom : 1.5em;
 text-align : center;
 padding-left : 10px;
 width : inherit;
-border-left : 10px solid #ffd293;
+border-left : 10px solid {color:Accent Color};
 }
 .blockquote:before {
 position : relative;
 display : block;
 content : '\f10d';
-color : #ffd293;
+color : {color:Accent Color};
 font-family : 'Font Awesome 5 Free';
 font-weight : 900;
 font-size : 50px;
@@ -196,7 +212,7 @@ display : block;
 margin : auto;
 margin-top : 23px;
 padding : 0;
-border-right : 10px solid #ffd293;
+border-right : 10px solid {color:Accent Color};
 width : 100%;
 }
 .blockquote-footer:before {
@@ -212,7 +228,7 @@ margin : auto;
 width : 100%;
 font-family : 'Roboto', sans-serif;
 font-weight : 900;
-color : #ffd79d;
+color : {color:Accent Color};
 }
 .search-form {
 position : relative;
@@ -369,7 +385,7 @@ border-bottom : 5px solid #000;
 background-color : #fff;
 }
 #mainNav a:hover {
-color : #ffd293;
+color : {color:Accent Color};
 }
 .navbar-toggler:focus {
 outline : 0;
@@ -385,7 +401,7 @@ Header
 ========================================================================== */
 .masthead {
 position : relative;
-background: linear-gradient(rgba(255, 255, 255, 0.50),rgba(255, 255, 255, 0.50)),url(https://images.unsplash.com/photo-1550095107-d14248140ce9?);
+background: linear-gradient(rgba(255, 255, 255, 0.50),rgba(255, 255, 255, 0.50)),url({image:Header Image});
 width : 100%;
 background-repeat: no-repeat;
 background-position-x: center;
@@ -430,17 +446,14 @@ color : #3b5998;
 .fab.fa-linkedin-in:hover {
 color : #0077b5;
 }
+.fab.fa-behance:hover {
+color : #1769ff;
+}
 .fab.fa-instagram:hover {
 color : #ffdc80;
 }
 .fab.fa-dribbble:hover {
 color : #ea4c89;
-}
-.fab.fa-youtube:hover {
-color : red;
-}
-.fab.fa-product-hunt:hover {
-color : #00b27f;
 }
 .social-icon-padding {
 padding-left : 10px;
@@ -631,7 +644,7 @@ color : black;
 font-weight : 700;
 }
 .even span.label:first-child {
-color : #ffd293;
+color : {color:Accent Color};
 font-weight : 700;
 }
 li.odd {
@@ -814,16 +827,16 @@ padding-left : 0;
 ========================================================================== */
 
 .fas.fa-long-arrow-alt-left {
-    position: relative;
-    display: block;
-    color: #cdcdcd;
-    font-size: 31px;
-    margin: 0 auto;
-    text-align: center;
-    margin-right: 0px;
-    margin-left: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+position: relative;
+display: block;
+color: #cdcdcd;
+font-size: 31px;
+margin: 0 auto;
+text-align: center;
+margin-right: 0px;
+margin-left: 0;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 .fas.fa-long-arrow-alt-left:hover {
 position : relative;
@@ -831,16 +844,16 @@ display : block;
 color : #2e2e2e;
 }
 .fas.fa-long-arrow-alt-right {
-    position: relative;
-    display: block;
-    color: #cdcdcd;
-    font-size: 31px;
-    margin: 0 auto;
-    text-align: center;
-    margin-right: 0px;
-    margin-left: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+position: relative;
+display: block;
+color: #cdcdcd;
+font-size: 31px;
+margin: 0 auto;
+text-align: center;
+margin-right: 0px;
+margin-left: 0;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 .fas.fa-long-arrow-alt-right:hover {
 color : #2e2e2e;
@@ -887,31 +900,31 @@ color : #2e2e2e !important ;
 /* Scroll to Top
 ========================================================================== */
 .fas.fa-long-arrow-alt-up {
-    position: relative;
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    margin: 0 auto;
-    text-align: center;
-    margin-right: 0px;
-    margin-left: 0;
+position: relative;
+display: block;
+color: #fff;
+font-size: 20px;
+margin: 0 auto;
+text-align: center;
+margin-right: 0px;
+margin-left: 0;
 }
 span.scrollToTop {
-    position: fixed;
-    bottom: 0;
-    color: #ffffff;
-    margin: auto;
-    padding-top: 10px;
-    margin-left:35px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    width: 40px;
-    margin-top: 23px;
-    margin-bottom: 23px;
-    border-radius: 50%;
-    background-color: #000000;
+position: fixed;
+bottom: 0;
+color: #ffffff;
+margin: auto;
+padding-top: 10px;
+margin-left:35px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 10px;
+text-align: center;
+width: 40px;
+margin-top: 23px;
+margin-bottom: 23px;
+border-radius: 50%;
+background-color: #000000;
 }
 }
 */
@@ -959,10 +972,26 @@ type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label=
 <p class="blog-desc">{Description}</p>
 {/block:Description}
 <ul class="social-media-icons">
-<li><a href="https://dribbble.com/lloyddavid"><i class="fab fa-dribbble social-icon-padding"></i></a></li>
-<li><a href="https://www.instagram.com/lloyddaviddesigns"><i class="fab fa-instagram social-icon-padding"></i></a></li>
-<li><a href="https://www.behance.net/lloyddavid"><i class="fab fa-behance social-icon-padding"></i></a></li>
-<li><a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in social-icon-padding"></i></a></li>
+{block:IfIcon1}
+{block:IfIconLink1}
+<li><a href="{text:Icon Link 1}"><i class="fab fa-{text:Icon 1} social-icon-padding"></i></a></li>
+{/block:IfIconLink1}
+{/block:IfIcon1}
+{block:IfIcon2}
+{block:IfIconLink2}
+<li><a href="{text:Icon Link 2}"><i class="fab fa-{text:Icon 2} social-icon-padding"></i></a></li>
+{/block:IfIconLink2}
+{/block:IfIcon2}
+{block:IfIcon3}
+{block:IfIconLink3}
+<li><a href="{text:Icon Link 3}"><i class="fab fa-{text:Icon 3} social-icon-padding"></i></a></li>
+{/block:IfIconLink3}
+{/block:IfIcon3}
+{block:IfIcon4}
+{block:IfIconLink4}
+<li><a href="{text:Icon Link 4}"><i class="fab fa-{text:Icon 4} social-icon-padding"></i></a></li>
+{/block:IfIconLink4}
+{/block:IfIcon4}
 </ul>
 </div>
 </div>
@@ -1022,10 +1051,10 @@ type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label=
 
 <ul class="share">
 <li><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><i class="fab fa-pinterest-p share-icons"></i></a></li>
-<li> <a href="http://reddit.com/submit?url=https://lloyddaviddesigns.co.uk/&amp;title=Lloyd%20David%20Designs%20" target="_blank"><i class="fab fa-reddit-alien share-icons"></i></a></li>
-<li><a href="https://twitter.com/share?url=https://lloyddaviddesigns.co.uk/&amp;text=Lloyd%20David%20Designs%20&amp;hashtags=lloyddaviddesigns" target="_blank"><i class="fab fa-twitter share-icons"></i></a></li>
-<li><a href="http://www.facebook.com/sharer.php?u=https://lloyddaviddesigns.co.uk/" target="_blank"><i class="fab fa-facebook-f share-icons"></i></a></li>
-<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://lloyddaviddesigns.co.uk/" target="_blank"><i class="fab fa-linkedin-in share-icons"></i></a></li>
+<li> <a href="http://reddit.com/submit?url={BlogURL}&amp;title={Title}" target="_blank"><i class="fab fa-reddit-alien share-icons"></i></a></li>
+<li><a href="https://twitter.com/share?url={BlogURL}&amp;text={Title}&amp;hashtags={Title}" target="_blank"><i class="fab fa-twitter share-icons"></i></a></li>
+<li><a href="http://www.facebook.com/sharer.php?u={BlogURL}" target="_blank"><i class="fab fa-facebook-f share-icons"></i></a></li>
+<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={BlogURL}" target="_blank"><i class="fab fa-linkedin-in share-icons"></i></a></li>
 </ul>
 <div class="post-author-info"><a href="#">
 <img src="{PortraitURL-128}" class="post-author-image"></a>
@@ -1173,6 +1202,7 @@ type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label=
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script>
+{block:IfShowAnimatedHeading}
 var typed = new Typed('#typed', {
 // Parameters
 strings: ["Welcome^2000", "to^500", "the^800", "official blog.^2000",],
@@ -1188,6 +1218,7 @@ showCursor: true,
 cursorChar: '|',
 autoInsertCss: true,
 });
+{/block:IfShowAnimatedHeading}
 </script>
 <script src="https://static.tumblr.com/pekmf57/KyLpuzotr/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.js"></script>
