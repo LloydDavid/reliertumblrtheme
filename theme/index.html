@@ -713,12 +713,12 @@ margin-top : 69px;
 .all-posts .post-meta p a {
 color : #333;
 }
-.all-posts .post-meta p .by a {
+.all-posts .post-meta p .by {
 font-family : 'Roboto', sans-serif;
 font-weight : 700;
 color : #cdcdcd;
 }
-.all-posts .post-meta p .by a:hover {
+.all-posts .post-meta p .by :hover {
 color : #2e2e2e;
 }
 .all-posts .post-meta p .post-notes a {
@@ -760,12 +760,6 @@ margin-bottom : 0;
 .post-author-info {
 position : relative;
 margin-bottom : 23px;
-}
-span.by a {
-color : #cdcdcd;
-}
-span.by a:hover {
-color : #2e2e2e;
 }
 .post-author-image {
 position : relative;
@@ -1002,7 +996,7 @@ type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label=
 <input input type="text" name="q" class="form-control" value="{SearchQuery}" placeholder="Search tags, hit enter…">
 </form>
 <a href="/archive">
-<button class="btn btn-primary archive-button shadow-none animated fadeInUp delay-1s" type="button">Blog Archive</button>
+<button class="btn btn-primary archive-button shadow-none animated fadeInUp delay-1s" type="button">{lang:Browse the archive}</button>
 </a>
 </header>
 
@@ -1027,7 +1021,7 @@ type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label=
 {block:Posts}
 <div class="post-meta">
 <p class="text-center">
-<span class="by"><a href="#">{PostAuthorName}</a></span> 
+<span class="by">{lang:By PostAuthorName}</span>  
 {block:Date}
 <a href="{Permalink}"><span class="date">{Timeago}</span></a>
 {/block:Date}
